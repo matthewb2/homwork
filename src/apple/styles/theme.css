@@ -27,7 +27,7 @@
   --small-spacing: 0.75rem; /* 12px - 카드 제목, 부제목, 버튼(링크)간 여백(gap), 버튼(링크) 좌,우 안쪽 여백 */
   --base-spacing: 1rem; /* 16px - 2개의 버튼(링크) 사이 여백 (공통) */
   --large-spacing: 2.5rem; /* 40px - Small Screen 상단 여백 */
-  --extra-large-spacing: 3.75rem; /* 60px - Large Screen 상단 여백 */
+  --large-spacing: 3.75rem; /* 60px - Large Screen 상단 여백 */
 
   --line-normal: 1.5; /* 부제목 줄간격 */
 }

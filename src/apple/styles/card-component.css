@@ -1,3 +1,222 @@
-@import "./reset.css";
-@import "./theme.css";
-@import "./base.css";
+@import './reset.css';
+@import './theme.css';
+@import './base.css';
+
+button {
+  cursor: pointer; /* 마우스를 올렸을 때 손가락 모양 */
+  pointer-events: auto; /* 클릭 이벤트 허용 */
+}
+
+.card {
+  /* background-image: url('/src/apple/products/airpods_pro.jpeg'); */
+  /* background-size: cover; */
+  /* background-position: center; */
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--large-spacing);
+  background-color: transparent;
+}
+
+.cell1,
+.cell2,
+.cell3,
+.cell4,
+.cell5,
+.cell6,
+.cell7 {
+  height: 100vh;
+  background-size: cover; /* 비율 유지하면서 꽉 채움 */
+  background-position: center; /* 가운데 정렬 */
+  background-repeat: no-repeat;
+  text-align: center; /* 텍스트 가로 중앙 정렬 */
+}
+
+.cell1 {
+  background-image: url('/src/apple/products/ipad_pro.jpeg');
+}
+.cell2 {
+  background-image: url('/src/apple/products/ipad_air.jpeg');
+}
+.cell3 {
+  background-image: url('/src/apple/products/iphone15_pro.jpeg');
+}
+.cell4 {
+  background-image: url('/src/apple/products/iphone15.jpeg');
+}
+.cell5 {
+  background-image: url('/src/apple/products/apple_watch.jpeg');
+}
+.cell6 {
+  background-image: url('/src/apple/products/macbook_air.jpeg');
+}
+.cell7 {
+  background-image: url('/src/apple/products/airpods_pro.jpeg');
+}
+
+.product_name {
+  color: var(--white);
+  font-size: var(--large-text);
+  margin-top: var(--large-spacing);
+  margin-bottom: var(--line-normal);
+}
+
+.product_name.iphone {
+  color: var(--black);
+}
+
+.product_name.macbook {
+  color: var(--black);
+}
+
+.description {
+  color: var(--white);
+  font-size: var(--base-text);
+  margin-bottom: var(--x-small-spacing);
+}
+
+.description.iphone {
+  color: var(--black);
+}
+
+.description.macbook {
+  color: var(--black);
+}
+
+.user_ui {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  column-gap: var(--base-spacing);
+  padding: var(--x-small-spacing) var(--small-spacing);
+  font-size: var(--xx-small-text);
+}
+.btn_more {
+  inline-size: 80px;
+  block-size: 25px;
+  color: var(--white);
+  background: var(--blue-100);
+  border: 1px solid var(--white);
+  border-radius: 10px;
+}
+
+.btn_price {
+  inline-size: 80px;
+  block-size: 25px;
+  color: var(--blue-200);
+  background: var(--white);
+  border: 1px solid var(--blue-100);
+  border-radius: 10px;
+}
+
+/* 2배율 (레티나 디스플레이) */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .cell1 {
+    height: 100vh;
+    background-image: url('/src/apple/products/ipad_pro.jpeg');
+  }
+  .cell2 {
+    height: 100vh;
+    background-image: url('/src/apple/products/ipad_air.jpeg');
+  }
+  .cell3 {
+    height: 100vh;
+    background-image: url('/src/apple/products/iphone15_pro.jpeg');
+  }
+  .cell4 {
+    height: 100vh;
+    background-image: url('/src/apple/products/iphone15.jpeg');
+  }
+  .cell5 {
+    height: 100vh;
+    background-image: url('/src/apple/products/apple_watch.jpeg');
+  }
+  .cell6 {
+    height: 100vh;
+    background-image: url('/src/apple/products/macbook_air.jpeg');
+  }
+  .cell6 {
+    height: 100vh;
+    background-image: url('/src/apple/products/airpods_pro_2x.jpeg');
+  }
+
+  .cell7 {
+    height: 100vh;
+    background-image: url('/src/apple/products/airpods_pro_2x.jpeg');
+  }
+}
+
+/* 1280px 초과일 때 (와이드 이미지로 교체) */
+
+@media (width> 1024px) {
+  .card {
+    gap: var(--large-spacing);
+    background-color: transparent;
+  }
+  .cell1 {
+    height: 100vh;
+    background-image: url('/src/apple/products/ipad_pro_wide.jpeg');
+    justify-content: center;
+  }
+  .cell2 {
+    height: 100vh;
+    background-image: url('/src/apple/products/ipad_air_wide.jpeg');
+  }
+  .cell3 {
+    height: 100vh;
+    background-image: url('/src/apple/products/iphone15_pro_wide.jpeg');
+  }
+
+  .product_name {
+    color: var(--white);
+    font-size: var(--extra-large-text);
+    margin-bottom: var(--line-normal);
+  }
+
+  .product_name.iphone {
+    color: var(--black);
+  }
+
+  .product_name.macbook {
+    color: var(--black);
+  }
+
+  .description {
+    color: var(--white);
+    font-size: var(--medium-text);
+    margin-bottom: var(--x-small-spacing);
+  }
+
+  .description.iphone {
+    color: var(--black);
+  }
+  .description.macbook {
+    color: var(--black);
+  }
+
+  .user_ui {
+    display: inline-flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    column-gap: var(--base-spacing);
+    padding: var(--x-small-spacing) var(--small-spacing);
+    font-size: var(--x-small-text);
+  }
+  .btn_more {
+    inline-size: 80px;
+    block-size: 25px;
+    color: var(--white);
+    background: var(--blue-100);
+    border: 1px solid var(--white);
+    border-radius: 10px;
+  }
+
+  .btn_price {
+    inline-size: 80px;
+    block-size: 25px;
+    inline-size: 100px;
+    color: var(--blue-200);
+    background: var(--white);
+    border: 1px solid var(--blue-100);
+    border-radius: 10px;
+  }
+}
